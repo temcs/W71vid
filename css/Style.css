@@ -108,6 +108,157 @@ img
 .navbar-default .navbar-toggle:focus { background-color: transparent }
 /* end navigation */
 
+/* start flow */
+
+.flow{
+  display: flex;
+  position: fixed;
+  width: auto;
+  background-color: transparent;
+  z-index: 5000;
+  right: 0;
+  top: 60%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 30px;
+  padding: 0;
+}
+.flow ul{
+list-style: none;
+text-decoration: none;
+background-color: transparent;
+}
+.flow ul li {
+list-style: none;
+text-decoration: none;
+margin: 10px;
+background-color: transparent;
+}
+
+.flow ul li a {
+text-align: center;
+background-color: transparent;
+text-decoration: none;
+}
+.flow ul li a i{
+width: 100%;
+text-align: center;
+background-color: transparent;
+padding: .8rem;
+background-color:#00c441;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+}
+.flow ul li a i:hover{
+background-color: white;
+color: rgb(0, 197, 26);
+}
+/* ---------------------------------------------  */
+@keyframes shake {
+0%, 100% { transform: translateX(0); }
+25%, 75% { transform: translateX(-10px); }
+50% { transform: translateX(10px); }
+}
+
+/* ---------------------------------------------  */
+@keyframes fastshake {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-15px);
+  }
+  20% {
+    transform: translateX(15px);
+  }
+  30% {
+    transform: translateX(-15px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  60% {
+    transform: translateX(15px);
+  }
+  70% {
+    transform: translateX(-15px);
+  }
+  80% {
+    transform: translateX(15px);
+  }
+  90% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* ---------------------------------------------  */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+/* ---------------------------------------------  */
+@keyframes blinkshake {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(-5px);
+    opacity: 0.8;
+  }
+  20% {
+    transform: translateX(5px);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateX(-5px);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateX(5px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translateX(-5px);
+    opacity: 0.6;
+  }
+  70% {
+    transform: translateX(5px);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateX(-5px);
+    opacity: 0.6;
+  }
+  90% {
+    transform: translateX(5px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* ---------------------------------------------  */
+.shaking {
+animation: rotate 1s ease-in-out forwards;
+}
+/* end Flow */
+
 /* start flexslider */
 .flexslider {
   margin-top: 114px;
