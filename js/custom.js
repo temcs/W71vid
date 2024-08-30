@@ -113,3 +113,42 @@ if (!clickDiv || !hiddenDiv) {
     }
   });
 }
+
+
+//share button
+
+function shareVideo(buttonElement) {
+    const videoContainer = buttonElement.closest('.Videos');
+    const videoId = videoContainer.id;
+    const videoTitle = videoContainer.querySelector('h4').childNodes[0].textContent.trim();
+    const websiteUrl = 'https://wicket71.info/'; // Replace with your website URL
+    const shareUrl = `${websiteUrl}#${videoId}`;
+    const shareText = `${videoTitle} - এখান থেকে দেখুন : ${shareUrl}`;
+
+    // Copy the share text to the clipboard
+    navigator.clipboard.writeText(shareText).then(() => {
+        console.log('Link copied to clipboard');
+
+        // Show the custom notification
+        const notification = document.getElementById('copyNotification');
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 2000); // Hide notification after 2 seconds
+    }).catch(console.error);
+
+    if (navigator.share) {
+        navigator.share({
+            text: shareText
+        }).then(() => {
+            console.log('Thanks for sharing!');
+        }).catch(console.error);
+    } else {
+        // Fallback for browsers that don't support the Web Share API
+        prompt('Copy this link to share:', shareText);
+    }
+}
+
+
+  
+  
